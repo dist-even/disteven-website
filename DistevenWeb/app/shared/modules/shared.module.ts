@@ -9,7 +9,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 // Our internal application modules and components will be imported here
 import { NgxBootstrapModule } from './ngx-bootstrap.module';
-import { LoginComponent, SpinnerComponent, SearchComponent, EmptyViewComponent } from '../components';
+import { SpinnerComponent, SearchComponent, EmptyViewComponent } from '../components';
 import { CustomDatePipe } from '../pipes';
 // import {
 //     ConfirmDialogComponent,
@@ -32,7 +32,6 @@ import { EventEmiterService } from '../services';
     declarations: [
         SpinnerComponent,
         CustomDatePipe,
-        LoginComponent,
         SearchComponent,
         EmptyViewComponent,
     ],
@@ -45,7 +44,6 @@ import { EventEmiterService } from '../services';
         NgSelectModule,
         SpinnerComponent,
         CustomDatePipe,
-        LoginComponent,
         SearchComponent,
         EmptyViewComponent,
     ],

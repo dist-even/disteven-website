@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { HomePageComponent } from "./home-page";
-import { LoginComponent } from "./shared";
 import { PageNotFoundComponent } from "./layout";
 import { AboutUsComponent } from "./about-us";
 
@@ -54,7 +53,6 @@ const routes: Routes = [
       }),
   },
   { path: "about", component: AboutUsComponent },
-  { path: "login", component: LoginComponent },
   { path: "**", component: PageNotFoundComponent },
 ];
 
