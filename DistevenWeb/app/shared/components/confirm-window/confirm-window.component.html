@@ -1,0 +1,20 @@
+<ng-container *ngIf="!!confirmWindowSettings">
+    <div class="modal-header">
+        <h5 class="modal-title">{{confirmWindowSettings.title}}</h5>
+        <span class="text-slate hover-danger cursor-pointer" *ngIf="!confirmWindowSettings.isAlertDialogBox" (click)="cancel()">
+            <i class="bi bi-x-circle"></i>
+        </span>
+    </div>
+    <div class="modal-body">
+        <p class="text-large">{{confirmWindowSettings.message}}</p>
+        <p class="text-secondary text-small mt-10" [innerHtml]="confirmWindowSettings.secondaryMessage" *ngIf="confirmWindowSettings.secondaryMessage"></p>
+        <div class="mt-10 d-flex text-small" *ngIf="confirmWindowSettings.isConfirmationCheckboxFieldRequired" style="gap: 0.5rem;">
+            <input type="checkbox" [(ngModel)]="isConfirmed" id="isConfirmed" />
+            <label for="isConfirmed" class="mr-2">{{confirmWindowSettings.confirmationCheckboxLabel}}</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" *ngIf="!confirmWindowSettings.isAlertDialogBox" (click)="cancel()">{{confirmWindowSettings.cancelButtonText}}</button>
+        <button class="btn {{confirmWindowSettings.confirmButtonBackgroundColor}} btn-sm" [disabled]="confirmWindowSettings.isConfirmationCheckboxFieldRequired && !isConfirmed" (click)="confirm()">{{confirmWindowSettings.confirmButtonText}}</button>
+    </div>
+</ng-container>

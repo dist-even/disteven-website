@@ -1,0 +1,24 @@
+<div class="row mt-60">
+  <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center mb-20" >
+    <img src="../../../assets//images/hero-2.png" [@appearAnimation] alt="money-disteven" [ngClass]="{'d-none':!isImageLoaded}" style="width: 75%; border-radius: 10px" (load)="setLoadedStatus()" />
+    <ng-container #loadingContainer>
+      <p class="text-secondary-light" [ngClass]="{'d-none':isImageLoaded}">loading...</p>
+    </ng-container>
+    <h2 class="animated-text mb-2 mt-30" [attr.data-text]="textToAnimate ? textToAnimate : 'Disteven...'" style="user-select: none;" [@appearAnimation]>
+      {{textToAnimate ? textToAnimate : 'Disteven...'}}
+    </h2>
+  </div>
+  <div class="col-sm-6 d-flex flex-column justify-content-center align-items-start mb-20" [@appearAnimation]>
+    <h3 class="mb-1 text-white" style="line-height: 175%">
+      <span class="text-accent">Dist</span>ribute money
+      <span class="text-accent">even</span>ly.
+    </h3>
+    <div class="text-slate mb-10">
+      <h5 class="mb-10">Manage your expenses. Track pending funds. Create groups.</h5>
+      <p>And much more...</p>
+    </div>
+    <div class="my-8">
+      <a href="/login" class="btn btn-outline-accent btn-sm">Get Started →</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<ng-http-loader [entryComponent]="spinnerComponent" [backdrop]="true" [backdropBackgroundColor]="'rgba(0,0,0,.025)'"></ng-http-loader>
+<div class="pt-100">
+    <disteven-top-nav></disteven-top-nav>
+</div>
+<div class="container">
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>
