@@ -68,6 +68,10 @@ accent-color: $accent;
   @extend .bg-secondary;
 }
 
+.on-hover-bg-red:hover {
+  @extend .bg-danger;
+}
+
 .on-hover-text:hover {
  @extend .text-accent;
 }

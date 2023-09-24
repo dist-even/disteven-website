@@ -3,16 +3,16 @@
         <i class="bi bi-arrow-left text-small"></i>
         Go back
     </a>
-    <a class="d-flex align-items-center gap-2 mr-4 on-hover-underline" href="/support" target="_blank">
-        <i class="bi bi-heart text-danger mr-4"></i>
+    <a class="d-flex align-items-center gap-2 mr-4 on-hover-underline" href="/support" target="_blank" (mouseenter)="isSupportHovered = true" (mouseleave)="isSupportHovered = false">
+        <i class="bi text-danger {{isSupportHovered ? 'bi-heart-fill' : 'bi-heart'}} mr-2"></i>
         <span>Support</span>
     </a>
 </a>
 <div class="card m-0 bg-dark mb-40 border-secondary">
     <div class="card-body">
-        <h3 class="mb-20 border-bottom border-secondary pb-10">About</h3>
+        <h3 class="mb-20 border-bottom border-secondary pb-10 text-white">About</h3>
         <section class="mb-30" #companyOverview>
-            <h5 class="text-white mb-12">Company overview</h5>
+            <h5 class="text-white mb-12 text-white">Company overview</h5>
             <div class="border-left border-2 border-secondary pl-10 ml-4">
                 <p class="text-small text-white-light">
                     At <b>Disteven</b>, we understand the complexities that often arise when it comes
@@ -64,8 +64,8 @@
 </div>
 <div class="card mx-0 mb-30 bg-dark border-secondary">
     <div class="card-body">
-        <h3 class="mb-20 border-bottom border-secondary pb-10">Contact</h3>
-        <p class="text-small mb-20">Need assistance? Reach out to us at <a href="mailto:distevenapp@gmail.com" class="text-primary">distevenapp@gmail.com</a> <br><br> 🙂 We welcome any suggestions, feedback or ideas that might make the <b>Disteven</b> experience better.</p>
+        <h3 class="mb-20 border-bottom border-secondary pb-10 text-white">Contact</h3>
+        <p class="text-small mb-20 text-white">Need assistance? Reach out to us at <a href="mailto:distevenapp@gmail.com" class="text-primary">distevenapp@gmail.com</a> <br><br> 🙂 We welcome any suggestions, feedback or ideas that might make the <b>Disteven</b> experience better.</p>
         <!-- <div class="card m-0">
             <div class="card-body">
                 <form class="form-group">

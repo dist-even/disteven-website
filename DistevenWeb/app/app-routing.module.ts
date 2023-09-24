@@ -9,23 +9,8 @@ const routes: Routes = [
   {
     path: "",
     children: [
-      { path: "", redirectTo: "home", pathMatch: "full" },
-      { path: "home", component: HomePageComponent },
-      // {
-      //   path: "friends",
-      //   loadChildren: () => import("./friendships/friendships.module").then( (m) => m.FriendshipsModule),
-      //   canActivate: [AuthGuard],
-      // },
-      // {
-      //   path: "groups",
-      //   loadChildren: () => import("./groups/groups.module").then((m) => m.GroupsModule),
-      //   canActivate: [AuthGuard],
-      // },
-      // {
-      //   path: "expenses",
-      //   loadChildren: () => import("./expenses/expenses.module").then((m) => m.ExpensesModule),
-      //   canActivate: [AuthGuard],
-      // },
+      { path: "home", redirectTo: "", pathMatch: "full" },
+      { path: "", component: HomePageComponent },
     ],
   },
   {
