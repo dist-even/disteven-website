@@ -5,15 +5,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page';
 import { TopNavComponent, PageNotFoundComponent } from './layout';
-import { ApiService, SharedModule, SpinnerComponent, ConfirmWindowComponent, EventEmiterService } from './shared';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ApiService, SharedModule, ConfirmWindowComponent, EventEmiterService } from './shared';
 import { AboutUsComponent } from './about-us';
+import { LoginPageComponent } from './login-page';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { AboutUsComponent } from './about-us';
     ConfirmWindowComponent,
     PageNotFoundComponent,
     AboutUsComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,

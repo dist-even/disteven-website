@@ -4,15 +4,12 @@ import { RouterModule, Routes } from "@angular/router";
 import { HomePageComponent } from "./home-page";
 import { PageNotFoundComponent } from "./layout";
 import { AboutUsComponent } from "./about-us";
+import { LoginPageComponent } from "./login-page";
+import { SpinnerVisibilityService } from "ng-http-loader";
 
 const routes: Routes = [
-  {
-    path: "",
-    children: [
-      { path: "home", redirectTo: "", pathMatch: "full" },
-      { path: "", component: HomePageComponent },
-    ],
-  },
+  { path: "home", redirectTo: "", pathMatch: "full" },
+  { path: "", component: HomePageComponent },
   {
     path: "support",
     loadChildren: () =>
@@ -37,6 +34,23 @@ const routes: Routes = [
           window.location.href = "https://github.com/SyedAli310";
       }),
   },
+  {
+    path: "signin",
+    loadChildren: () =>
+      new Promise(() => {
+        if (window.location.href.match(/signin/))
+          window.location.href = "https://app.disteven.live";
+      }),
+  },
+  {
+    path: "signup",
+    loadChildren: () =>
+      new Promise(() => {
+        if (window.location.href.match(/signup/))
+          window.location.href = "https://app.disteven.live";
+      }),
+  },
+  { path: "login", component: LoginPageComponent },
   { path: "about", component: AboutUsComponent },
   { path: "**", component: PageNotFoundComponent },
 ];

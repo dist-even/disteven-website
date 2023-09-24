@@ -80,6 +80,18 @@ accent-color: $accent;
   text-decoration: underline !important;
 }
 
+.h-100vh{ 
+  height: 100vh;
+}
+
+.h-100-60{
+  height: calc(100vh - 60px);
+}
+
+.h-100-100{
+  height: calc(100vh - 100px);
+}
+
 .top-nav{
     height: 60px;
     position: fixed;
@@ -122,6 +134,17 @@ accent-color: $accent;
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.outline-none {
+  outline: none;
+}
+.border-none {
+  border: none;
+}
+
+.bg-transparent {
+  background: transparent;
 }
 
 .grid-masonry {
@@ -256,7 +279,6 @@ accent-color: $accent;
     color: $black-ter;
     font-size: 14px;
     font-weight: 500;
-    font-family: sans-serif;
     background-color: $white;
     gap: 0.5rem;
   }
@@ -517,3 +539,13 @@ accent-color: $accent;
   }
 }
 // 404 svg animations end
+
+
+// login page styles
+.login-card {
+  max-width: 600px;
+  width: 90%;
+  height: max-content;
+  transition: all ease 300ms;
+}
+// login page styles end

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'disteven-top-nav',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TopNavComponent implements OnInit {
   isMenuOpen: boolean;
 
-  constructor() { }
+  constructor(public router: Router) { }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void {     
+  }
 
   handler(value: string) {
     switch (value) {

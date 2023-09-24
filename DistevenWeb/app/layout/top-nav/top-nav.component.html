@@ -6,6 +6,12 @@
     </a>
   </div>
   <div>
+    <div class="desktop-visibility">
+      <a class="btn btn-outline-accent btn-sm mr-16 rounded-4 text-small" [routerLink]="['login']" *ngIf="router.url.indexOf('login') == -1">
+        <i class="bi bi-person"></i>
+        Login
+      </a>
+    </div>
     <div class="btn-group dropdown" placement="bottom right" dropdown  (onShown)="handler('onShown')" (onHidden)="handler('onHidden')">
       <button 
         class="menu has-text-white" 
@@ -22,7 +28,6 @@
         </svg>
     </button>
     <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" style="width: 200px; font-size: smaller;" role="menu" aria-labelledby="button-menu-dividers">
-
       <!-- <li class="divider dropdown-divider mb-0"></li> -->
       <li class="dropdown-item border-bottom border-secondary">
         <a routerLinkActive="text-accent" class="d-flex align-items-center" [routerLink]="['home']">
@@ -36,6 +41,17 @@
           <span>About</span>
         </a>
       </li>
+      <div class="mobile-visibility">
+        <li class="divider dropdown-divider m-0"></li> 
+        <li class="text-center mt-2">
+          <div>
+            <a class="btn btn-outline-accent btn-sm mr-10 rounded-4 text-small" [routerLink]="['login']" *ngIf="router.url.indexOf('login') == -1">
+              <i class="bi bi-person"></i>
+              Login
+            </a>
+          </div>
+        </li>
+      </div>
     </ul>
     </div>
   </div>

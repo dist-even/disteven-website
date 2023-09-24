@@ -20,17 +20,17 @@ export class AppComponent {
       "font-size: large; color: #00d398; font-weight: bold; font-family: 'Noto Sans Mono', monospace; width:100vw;"
     );
     
-    // this.router.events.subscribe((routerEvent: Event) => {
-    //   if (routerEvent instanceof NavigationStart) {
-    //     this.spinnerService.show();
-    //   }
+    this.router.events.subscribe((routerEvent: Event) => {
+      if (routerEvent instanceof NavigationStart && (routerEvent.url.match(/signin/) || routerEvent.url.match(/signup/))) {
+        this.spinnerService.show();
+      }
   
-    //   if (routerEvent instanceof NavigationEnd ||
-    //     routerEvent instanceof NavigationCancel ||
-    //     routerEvent instanceof NavigationError) {
-    //     this.spinnerService.hide();
-    //   }
-    // });
+      if (routerEvent instanceof NavigationEnd ||
+        routerEvent instanceof NavigationCancel ||
+        routerEvent instanceof NavigationError) {
+        this.spinnerService.hide();
+      }
+    });
   }
 
   onActivate(event) {
