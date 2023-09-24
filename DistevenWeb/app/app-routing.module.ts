@@ -5,7 +5,6 @@ import { HomePageComponent } from "./home-page";
 import { PageNotFoundComponent } from "./layout";
 import { AboutUsComponent } from "./about-us";
 import { LoginPageComponent } from "./login-page";
-import { SpinnerVisibilityService } from "ng-http-loader";
 
 const routes: Routes = [
   { path: "home", redirectTo: "", pathMatch: "full" },
@@ -39,7 +38,7 @@ const routes: Routes = [
     loadChildren: () =>
       new Promise(() => {
         if (window.location.href.match(/signin/))
-          window.location.href = "https://app.disteven.live";
+          window.location.href = "https://app.dev.disteven.live";
       }),
   },
   {
@@ -47,7 +46,7 @@ const routes: Routes = [
     loadChildren: () =>
       new Promise(() => {
         if (window.location.href.match(/signup/))
-          window.location.href = "https://app.disteven.live";
+          window.location.href = "https://app.dev.disteven.live";
       }),
   },
   { path: "login", component: LoginPageComponent },
