@@ -39,7 +39,7 @@ const routes: Routes = [
     loadChildren: () =>
       new Promise(() => {
         if (window.location.href.match(/signin/))
-          window.location.href = "https://app.disteven.live";
+          window.location.href = "https://app.disteven.com";
       }),
   },
   {
@@ -47,7 +47,7 @@ const routes: Routes = [
     loadChildren: () =>
       new Promise(() => {
         if (window.location.href.match(/signup/))
-          window.location.href = "https://app.disteven.live";
+          window.location.href = "https://app.disteven.com";
       }),
   },
   { path: "login", component: LoginPageComponent },
