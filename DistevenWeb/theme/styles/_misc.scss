@@ -167,7 +167,19 @@ accent-color: $accent;
         column-count: 1;
     }
 
-    .hero-info-section {
+    .hero-info-section:nth-child(1){
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+    }
+    .hero-info-section:nth-child(2) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+    }
+    .hero-info-section:nth-child(3) {
       flex-direction: column;
       justify-content: center;
       width: 100%;
@@ -177,6 +189,13 @@ accent-color: $accent;
     .hero-info-section-item {
       width: 100% !important;
       text-align: center !important;
+    }
+
+    .hero-info-section-item > h5 {
+      font-size: 20px !important;
+    }
+    .hero-info-section-item > p:first-child {
+      font-size: 16px !important;
     }
 
     [class^="col-"], [class*=" col-"] {
