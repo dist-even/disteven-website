@@ -167,6 +167,9 @@ accent-color: $accent;
         column-count: 1;
     }
 
+    .hero-info-section {
+      padding-inline: unset !important;
+    }
     .hero-info-section:nth-child(1){
       flex-direction: column;
       justify-content: center;
