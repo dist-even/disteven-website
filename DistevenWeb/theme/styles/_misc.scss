@@ -94,11 +94,13 @@ accent-color: $accent;
 
 .top-nav{
     height: 60px;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1081;
+    background: #000000ac;
+    backdrop-filter: blur(20px);
 }
 
 // main logo styles
@@ -165,10 +167,30 @@ accent-color: $accent;
         column-count: 1;
     }
 
+    .hero-info-section {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .hero-info-section-item {
+      width: 100% !important;
+      text-align: center !important;
+    }
+
     [class^="col-"], [class*=" col-"] {
         justify-content: center !important;
         align-items: center !important;
         text-align: center !important;
+    }
+
+    .ui-shape-right {
+      display: none;
+    }
+
+    .hero-arrow {
+      display: none;
     }
 }
 
@@ -549,3 +571,96 @@ accent-color: $accent;
   transition: all ease 300ms;
 }
 // login page styles end
+
+
+// landing page UI
+#card-left,
+#card-right,
+#card-center {
+  transition: all ease 300ms;
+}
+
+#card-left {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: appearHero 1s ease forwards;
+}
+#card-right {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: appearHero 1s ease forwards;
+}
+#card-center {
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: appearHero 1s ease forwards;
+}
+
+#bulb {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: appearHero 1s ease forwards;
+}
+
+#message-bubble {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: appearHero 1s ease forwards;
+}
+
+#person-left {
+  opacity: 0;
+  animation: appearHero 1s ease forwards 1s;
+
+}
+#person-right {
+  opacity: 0;
+  animation: appearHero 1s ease forwards 1s;
+}
+
+.ui-shape-left {
+  position: fixed;
+  left: -60px;
+  top: 100px;
+  z-index: -1;
+  height: 100px;
+  width: 100px;
+  opacity: .75;
+}
+.ui-shape-right {
+  position: fixed;
+  right: -60px;
+  bottom: 100px;
+  z-index: -1;
+  height: 100px;
+  width: 100px;
+  opacity: .75;
+}
+
+.desktop-nav-item {
+  position: relative;
+  transition: all ease 300ms;
+}
+
+.desktop-nav-item::before {
+  content: '';
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $accent;
+  width: 0;
+  height: 1.5px;
+  transition: all ease 300ms;
+}
+.desktop-nav-item:hover::before {
+  width: 100%;
+}
+
+@keyframes appearHero {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+// landing page UI end

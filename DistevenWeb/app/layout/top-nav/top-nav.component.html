@@ -1,18 +1,24 @@
-<nav class="container-fluid px-30 d-flex justify-content-between align-items-center bg-black-sec top-nav" style="box-shadow: 0px 3px 15px rgba(227, 227, 227, 0.25);">
+<nav class="container-fluid px-30 d-flex justify-content-between align-items-center h-100" >
   <div class="position-relative">
-    <a class="d-flex align-items-center main-logo text-accent" [routerLink]="['home']">
+    <a class="d-flex align-items-center main-logo text-accent" href="/">
       <img src="../../../assets//images/logo.png" class="logo-image mr-10" alt="Disteven" height="35px" width="35px">
       <span id="dist">Dist</span><span id="even">even</span>
     </a>
   </div>
   <div>
     <div class="desktop-visibility">
-      <a class="btn btn-outline-accent btn-sm mr-16 rounded-4 text-small" [routerLink]="['login']" *ngIf="router.url.indexOf('login') == -1">
-        <i class="bi bi-person"></i>
-        Login
-      </a>
+      <div class="d-flex align-items-center gap-5">
+        <ul class="d-flex align-items-center justify-content-center p-0 gap-5 m-0" style="list-style: none;">
+          <li><a class="cursor-pointer desktop-nav-item" [routerLink]="['./']" routerLinkActive="font-bold text-accent" [routerLinkActiveOptions]= "{exact: true}">home</a></li>
+          <li><a class="cursor-pointer desktop-nav-item" [routerLink]="['/about']" routerLinkActive="font-bold text-accent">about</a></li>
+        </ul>
+        <a class="btn btn-outline-accent btn-sm mr-16 rounded-4 text-small" [routerLink]="['login']" *ngIf="router.url.indexOf('login') == -1">
+          <i class="bi bi-box-arrow-in-right"></i>
+          login
+        </a>
+      </div>
     </div>
-    <div class="btn-group dropdown" placement="bottom right" dropdown  (onShown)="handler('onShown')" (onHidden)="handler('onHidden')">
+    <div class="btn-group dropdown mobile-visibility" placement="bottom right" dropdown  (onShown)="handler('onShown')" (onHidden)="handler('onHidden')">
       <button 
         class="menu has-text-white" 
         id="hamburger-icon" 

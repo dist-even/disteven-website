@@ -1,16 +1,12 @@
-<a class="d-flex justify-content-between align-items-center gap-2 mb-12">
-    <a class="d-flex align-items-center gap-2 text-small text-primary" routerLink="..">
-        <i class="bi bi-arrow-left text-small"></i>
-        Go back
-    </a>
-    <a class="d-flex align-items-center gap-2 mr-4 on-hover-underline" href="/support" target="_blank" (mouseenter)="isSupportHovered = true" (mouseleave)="isSupportHovered = false">
-        <i class="bi text-danger {{isSupportHovered ? 'bi-heart-fill' : 'bi-heart'}} mr-2"></i>
-        <span>Support</span>
-    </a>
-</a>
-<div class="card m-0 bg-dark mb-40 border-secondary">
+<div class="card m-0 bg-dark mb-40 border-secondary mt-50">
     <div class="card-body">
-        <h3 class="mb-20 border-bottom border-secondary pb-10 text-white">About</h3>
+        <div class="d-flex align-items-center justify-content-between border-bottom border-secondary mb-20  pb-10">
+            <h3 class="text-white">About</h3>
+            <a class="d-flex align-items-center gap-2 mr-4 on-hover-underline" href="/support" target="_blank" (mouseenter)="isSupportHovered = true" (mouseleave)="isSupportHovered = false">
+                <i class="bi text-danger {{isSupportHovered ? 'bi-heart-fill' : 'bi-heart'}} mr-2"></i>
+                <span class="text-white-light">Support</span>
+            </a>
+        </div>
         <section class="mb-30" #companyOverview>
             <h5 class="text-white mb-12 text-white">Company overview</h5>
             <div class="border-left border-2 border-secondary pl-10 ml-4">
