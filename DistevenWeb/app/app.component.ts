@@ -48,4 +48,8 @@ export class AppComponent {
       behavior: 'smooth' 
     });
   }
+
+  getYear() {
+    return new Date().getFullYear();
+  }
 }

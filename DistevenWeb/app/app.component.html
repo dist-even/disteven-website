@@ -1,7 +1,10 @@
 <ng-http-loader [entryComponent]="spinnerComponent" [backdrop]="true" [backdropBackgroundColor]="'rgba(0,0,0,.025)'"></ng-http-loader>
-<div class="pt-100">
+<div class="top-nav">
     <disteven-top-nav></disteven-top-nav>
 </div>
 <div class="container">
     <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>
+<footer class="border-top pt-20 my-20 d-flex align-items-center border-secondary justify-content-center" style="box-shadow:2px -10px 10px #232323">
+    <p class="text-white-light">&copy; {{getYear()}} All rights reserved • <span class="text-accent">Disteven</span></p>
+</footer>
