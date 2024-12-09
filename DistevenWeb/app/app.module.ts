@@ -14,7 +14,6 @@ import { HomePageComponent } from './home-page';
 import { TopNavComponent, PageNotFoundComponent } from './layout';
 import { ApiService, SharedModule, ConfirmWindowComponent, EventEmiterService } from './shared';
 import { AboutUsComponent } from './about-us';
-import { LoginPageComponent } from './login-page';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { LoginPageComponent } from './login-page';
     ConfirmWindowComponent,
     PageNotFoundComponent,
     AboutUsComponent,
-    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
