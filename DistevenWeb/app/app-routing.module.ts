@@ -37,7 +37,7 @@ const routes: Routes = [
     loadChildren: () =>
       new Promise(() => {
         if (window.location.href.match(/get-started/))
-          window.location.href = "https://app.dev.disteven.com";
+          window.location.href = "https://app.disteven.com";
       }),
   },
   { path: "about", component: AboutUsComponent },
