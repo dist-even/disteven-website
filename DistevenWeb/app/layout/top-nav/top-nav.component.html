@@ -12,9 +12,8 @@
           <li><a class="cursor-pointer desktop-nav-item" [routerLink]="['./']" routerLinkActive="font-bold text-accent" [routerLinkActiveOptions]= "{exact: true}">home</a></li>
           <li><a class="cursor-pointer desktop-nav-item" [routerLink]="['/about']" routerLinkActive="font-bold text-accent">about</a></li>
         </ul>
-        <a class="btn btn-outline-accent btn-sm mr-16 rounded-4 text-small" [routerLink]="['login']" *ngIf="router.url.indexOf('login') == -1">
-          <i class="bi bi-box-arrow-in-right"></i>
-          login
+        <a class="btn btn-outline-accent btn-sm mr-16 rounded-4 text-small" href="/get-started">
+          get started
         </a>
       </div>
     </div>
@@ -49,11 +48,11 @@
       </li>
       <div class="mobile-visibility">
         <li class="divider dropdown-divider m-0"></li> 
-        <li class="text-center mt-2">
+        <li class="text-center mt-10 mb-4">
           <div>
-            <a class="btn btn-outline-accent btn-sm mr-10 rounded-4 text-small" [routerLink]="['login']" *ngIf="router.url.indexOf('login') == -1">
+            <a class="btn btn-outline-accent btn-sm mr-10 rounded-4 text-small" href="/get-started">
               <i class="bi bi-person"></i>
-              Login
+              get started
             </a>
           </div>
         </li>

@@ -103,6 +103,25 @@ accent-color: $accent;
     backdrop-filter: blur(20px);
 }
 
+/* Ensure the app wrapper takes up the full height of the viewport */
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Let the main content area grow, pushing the footer down */
+.main-container {
+    flex-grow: 1;
+}
+
+/* Footer styling */
+.footer {
+    box-shadow: 2px -10px 10px #232323;
+    background-color: #232323; /* Optional: Ensure footer background for better contrast */
+}
+
+
 // main logo styles
 .main-logo {
   transition: all ease 300ms;
