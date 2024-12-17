@@ -4,10 +4,12 @@ import { RouterModule, Routes } from "@angular/router";
 import { HomePageComponent } from "./home-page";
 import { PageNotFoundComponent } from "./layout";
 import { AboutUsComponent } from "./about-us";
+import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
 
 const routes: Routes = [
   { path: "home", redirectTo: "", pathMatch: "full" },
   { path: "", component: HomePageComponent },
+  { path: "privacy-policy", component: PrivacyPolicyComponent },
   {
     path: "support",
     loadChildren: () =>

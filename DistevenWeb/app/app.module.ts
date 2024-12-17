@@ -14,6 +14,7 @@ import { HomePageComponent } from './home-page';
 import { TopNavComponent, PageNotFoundComponent } from './layout';
 import { ApiService, SharedModule, ConfirmWindowComponent, EventEmiterService } from './shared';
 import { AboutUsComponent } from './about-us';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AboutUsComponent } from './about-us';
     ConfirmWindowComponent,
     PageNotFoundComponent,
     AboutUsComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
