@@ -37,7 +37,6 @@ import { EventEmiterService } from '../services';
         FormsModule,
         ReactiveFormsModule,
         RouterModule,
-        NgSelectModule,
         SpinnerComponent,
         CustomDatePipe,
         SearchComponent,
