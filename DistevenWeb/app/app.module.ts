@@ -4,9 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NgHttpLoaderModule } from 'ng-http-loader';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
-import { RoughNotationModule } from 'ngx-rough-notation';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,9 +32,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    NgHttpLoaderModule.forRoot(),
     NgbTooltipModule,
-    RoughNotationModule,
   ],
   providers: [
     ApiService,

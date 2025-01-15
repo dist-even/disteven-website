@@ -1,13 +1,12 @@
 <div class="app-wrapper">
-    <ng-http-loader [entryComponent]="spinnerComponent" [backdrop]="true" [backdropBackgroundColor]="'rgba(0,0,0,.025)'"></ng-http-loader>
     <header class="top-nav">
         <disteven-top-nav></disteven-top-nav>
     </header>
     <main class="container flex-grow-1 main-container">
         <router-outlet (activate)="onActivate($event)"></router-outlet>
     </main>
-    <footer class="border-top py-20 mt-50 d-flex align-items-center border-secondary justify-content-center footer">
-        <p class="text-white-light">
+    <footer class="border-top py-20 px-16 mt-50 d-flex align-items-center border-secondary justify-content-center footer">
+        <p class="text-white-light text-center">
             &copy; {{getYear()}} All rights reserved • <span class="text-accent">Disteven</span> • 
             <a routerLink="privacy-policy" class="text-primary">Privacy policy</a>
         </p>
