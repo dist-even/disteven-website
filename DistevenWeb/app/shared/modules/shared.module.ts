@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 // Third party module imports should be written here
-import { NgSelectModule } from '@ng-select/ng-select';
 
 // Our internal application modules and components will be imported here
 import { NgxBootstrapModule } from './ngx-bootstrap.module';
@@ -16,7 +15,6 @@ import { CustomDatePipe } from '../pipes';
 //     ConfirmDialogService,
 // } from '../components/confirm';
 
-import { MomentModule } from 'ngx-moment';
 import { EventEmiterService } from '../services';
 
 @NgModule({
@@ -26,8 +24,6 @@ import { EventEmiterService } from '../services';
         CommonModule,
         RouterModule,
         NgxBootstrapModule.forRoot(),
-        NgSelectModule,
-        MomentModule,
     ],
     declarations: [
         SpinnerComponent,
