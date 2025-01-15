@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router , Event} from '@angular/router';
 
-import { SpinnerVisibilityService } from 'ng-http-loader';
-
 import { SpinnerComponent } from './shared';
 
 
@@ -14,23 +12,11 @@ export class AppComponent {
   public spinnerComponent = SpinnerComponent;
   title = 'Disteven';
 
-  constructor(private router: Router, private spinnerService: SpinnerVisibilityService) {
+  constructor(private router: Router) {
     console.log(
       "%c Hi Devs, Welcome to Disteven 💸",
       "font-size: large; color: #00d398; font-weight: bold; font-family: 'Noto Sans Mono', monospace; width:100vw;"
     );
-    
-    this.router.events.subscribe((routerEvent: Event) => {
-      if (routerEvent instanceof NavigationStart && (routerEvent.url.match(/signin/) || routerEvent.url.match(/signup/))) {
-        this.spinnerService.show();
-      }
-  
-      if (routerEvent instanceof NavigationEnd ||
-        routerEvent instanceof NavigationCancel ||
-        routerEvent instanceof NavigationError) {
-        this.spinnerService.hide();
-      }
-    });
   }
 
   onActivate(event) {
