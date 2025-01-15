@@ -584,6 +584,11 @@ accent-color: $accent;
     .mt-sm-70 {
         margin-top: 70px;
     }
+
+    .bg-sm-black {
+        background-color: $black !important;
+        backdrop-filter: unset !important;    
+    }
 }
 // responsive visibility end
 
