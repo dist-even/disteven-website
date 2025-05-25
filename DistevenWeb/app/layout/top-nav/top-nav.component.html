@@ -11,6 +11,7 @@
         <ul class="d-flex align-items-center justify-content-center p-0 gap-5 m-0" style="list-style: none;">
           <li><a class="cursor-pointer desktop-nav-item" [routerLink]="['./']" routerLinkActive="font-bold text-accent" [routerLinkActiveOptions]= "{exact: true}">home</a></li>
           <li><a class="cursor-pointer desktop-nav-item" [routerLink]="['/about']" routerLinkActive="font-bold text-accent">about</a></li>
+          <li><a class="cursor-pointer desktop-nav-item" [routerLink]="['/blogs']" routerLinkActive="font-bold text-accent">blogs</a></li>
         </ul>
         <a class="btn btn-outline-accent btn-sm mr-16 rounded-4 text-small" href="/get-started">
           get started
@@ -40,10 +41,16 @@
           <span>Home</span>
         </a>
       </li>
-      <li class="dropdown-item">
+      <li class="dropdown-item border-bottom border-secondary">
         <a routerLinkActive="text-accent" class="d-flex align-items-center" [routerLink]="['about']">
           <i class="bi bi-info-circle mr-12"></i> 
           <span>About</span>
+        </a>
+      </li>
+      <li class="dropdown-item">
+        <a routerLinkActive="text-accent" class="d-flex align-items-center" [routerLink]="['blogs']">
+          <i class="bi bi-book mr-12"></i> 
+          <span>Blogs</span>
         </a>
       </li>
       <div class="mobile-visibility">

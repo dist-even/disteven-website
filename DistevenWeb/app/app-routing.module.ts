@@ -5,10 +5,13 @@ import { HomePageComponent } from "./home-page";
 import { PageNotFoundComponent } from "./layout";
 import { AboutUsComponent } from "./about-us";
 import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
+import { BlogsPageComponent } from "./blogs-page/blogs-page.component";
 
 const routes: Routes = [
   { path: "home", redirectTo: "", pathMatch: "full" },
   { path: "", component: HomePageComponent },
+  { path: "about", component: AboutUsComponent },
+  { path: "blogs", component: BlogsPageComponent },
   { path: "privacy-policy", component: PrivacyPolicyComponent },
   {
     path: "support",
@@ -42,7 +45,6 @@ const routes: Routes = [
           window.location.href = "https://app.disteven.com";
       }),
   },
-  { path: "about", component: AboutUsComponent },
   { path: "**", component: PageNotFoundComponent },
 ];
 
