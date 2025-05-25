@@ -8,10 +8,10 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div *ngFor="let blog of blogs" class="col d-flex">
                 <div class="border border-light rounded-3 p-20 d-flex flex-column gap-3">
-                    <div class="bg-black-sec p-20 rounded-3 d-flex align-items-center justify-content-center opacity-75" style="height: 150px; background-image: linear-gradient(to right, #000, #1b1b1b);">
-                        <img src="../../assets/images/logo.png" alt="Blog Image" class="img-fluid rounded-3 w-100 h-100" style="object-fit: contain;" />  
+                    <div class="bg-black-sec rounded-3 d-flex align-items-center justify-content-center opacity-75" style="height: 150px; background-image: linear-gradient(to right, #000, #1b1b1b);">
+                        <img src="../../assets/images/logo.png" alt="{{blog.title}}" class="img-fluid rounded-3" style="object-fit: contain; width: 50px;" />  
                     </div>
-                    <h5>{{ blog.title }}</h5>
+                    <h6>{{ blog.title }}</h6>
                     <div class="d-flex align-items-center justify-content-between gap-2">
                         <div class="d-flex align-items-center gap-3 flex-wrap text-small text-slate">
                             <div class="d-flex align-items-center gap-1">
@@ -27,7 +27,6 @@
                                 <i class="bi bi-chat"></i>
                             </div>
                         </div>
-    
                         <p class="text-secondary-light text-small">{{blog.publishedAt | date:"dd MMM, YYYY"}}</p>
                     </div>
                     <a href="https://blog.disteven.com/{{blog.slug}}" target="_blank" class="text-primary text-small on-hover-underline d-inline-flex align-items-center gap-1" style="width: max-content;">{{blog.readTimeInMinutes}} min read <i class="bi bi-arrow-up-right text-x-small"></i></a>
