@@ -48,7 +48,7 @@ export class BlogsPageComponent {
             next: (response: any) => {
                 if (response && response.data && response.data.publication) {
                     const blogsList = response.data.publication.posts.edges.map((edge: any) => edge.node);
-                    this.blogs = [...blogsList, ...blogsList, ...blogsList]; // Duplicate for demo purposes
+                    this.blogs = blogsList; // Duplicate for demo purposes
                     this.blogs.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
                     console.log(this.blogs);
                     this.isError = false;
